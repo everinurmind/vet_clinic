@@ -72,35 +72,35 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project you will need:
 
-- [Git](https://git-scm.com/)
 - [Node](https://nodejs.org/en/)
 - A code editor, such as [VSCode](https://code.visualstudio.com/)
+- [PostgreSQL](https://postgresql.org) (installed and configured)
 
 ### Setup
 
-Clone this repository to your desired folder:
+To get started with the Vet Clinic project, follow the steps below:
+
+Clone this repository to your desired folder using the following command:
 
 ```bash
-  git clone git@https://github.com/everinurmind/vet_clinic.git
+git clone https://github.com/everinurmind/vet_clinic.git
 ```
-
-### Install
-
-Install this project dependencies with:
+Change into the project directory:
 
 ```bash
-  npm install
+cd vet_clinic
 ```
-
-### Usage
-
-To run the project, execute the following command:
+Install project dependencies by running the following command:
 
 ```bash
-  npm run start
+npm install
 ```
+Set up the PostgreSQL database:
+
+- Create a new PostgreSQL database for the project.
+- Update the database configuration in the project's .env file to match your PostgreSQL setup.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
