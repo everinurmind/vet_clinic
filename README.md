@@ -92,11 +92,7 @@ Change into the project directory:
 ```bash
 cd vet_clinic
 ```
-Install project dependencies by running the following command:
 
-```bash
-npm install
-```
 Set up the PostgreSQL database:
 
 - Create a new PostgreSQL database for the project.
