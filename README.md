@@ -27,7 +27,11 @@
 
 # 📖 [vet-clinic] <a name="about-project"></a>
 
-In this project I developed the foundational structure for a vet clinic project, including the implementation of a relational database. Within this project, I designed and populated a table to store comprehensive information about animals. Additionally, I enabled the capability to insert data into the table and perform queries on it.
+In this project I developed the foundational structure for a vet clinic project, including the implementation of a relational database. Within this project, I designed and populated a table to store comprehensive information about animals. Additionally, I enabled the capability to insert data into the table and perform queries on it.\
+
+##  Database Schema Diagram
+
+<img src="animal table schema.png">
 
 ## 🛠 Built With <a name="built-with"></a>
 
