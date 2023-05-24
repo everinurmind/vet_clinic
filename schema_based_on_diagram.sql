@@ -7,7 +7,7 @@ CREATE TABLE patients (
   id INT GENERATED ALWAYS AS IDENTITY,
   name VARCHAR,
   date_of_birth DATE,
-  PRIMARY key (id)
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE medical_histories (
@@ -23,8 +23,8 @@ CREATE TABLE invoices (
   total_amount DECIMAL,
   generated_at TIMESTAMP,
   payed_at TIMESTAMP,
-  medical_histories_id INT REFERENCES medical_histories(id),
-  PRIMARY key (id)
+  medical_history_id INT REFERENCES medical_histories(id),
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE treatments (
@@ -43,15 +43,15 @@ CREATE TABLE invoice_items (
   PRIMARY KEY (id) 
 );
 
-CREATE TABLE histories_treatments (
-history_id INT REFERENCES medical_histories(id),
-treatments_id INT REFERENCES treatments(id)
+CREATE TABLE treatment_history (
+  history_id INT REFERENCES medical_histories(id),
+  treatment_id INT REFERENCES treatments(id)
 );
 
 -- Remember to add the FK indexes:
 CREATE INDEX patients_idx ON medical_histories(patient_id);
-CREATE INDEX medical_histories_idx ON invoices(medical_histories_id);
+CREATE INDEX medical_histories_idx ON invoices(medical_history_id);
 CREATE INDEX invoices_idx ON invoice_items(invoice_id);
 CREATE INDEX treatments_idx ON invoice_items(treatment_id);
-CREATE INDEX history_idx ON histories_treatments(history_id);
-CREATE INDEX treatment_idx ON histories_treatments(treatments_id);
+CREATE INDEX history_idx ON treatment_history(history_id);
+CREATE INDEX treatment_idx ON treatment_history(treatment_id);
