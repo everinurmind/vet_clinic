@@ -1,3 +1,4 @@
+/* Create new database */
 
 -- Implement the database from the diagram:
 CREATE DATABASE clinic;
@@ -46,3 +47,11 @@ CREATE TABLE histories_treatments (
 history_id INT REFERENCES medical_histories(id),
 treatments_id INT REFERENCES treatments(id)
 );
+
+-- Remember to add the FK indexes:
+CREATE INDEX patients_idx ON medical_histories(patient_id);
+CREATE INDEX medical_histories_idx ON invoices(medical_histories_id);
+CREATE INDEX invoices_idx ON invoice_items(invoice_id);
+CREATE INDEX treatments_idx ON invoice_items(treatment_id);
+CREATE INDEX history_idx ON histories_treatments(history_id);
+CREATE INDEX treatment_idx ON histories_treatments(treatments_id);
